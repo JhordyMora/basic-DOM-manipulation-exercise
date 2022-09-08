@@ -10,6 +10,7 @@ const input1 = document.getElementById('calculo');
 const input2 = document.querySelector('#calculo2');
 const btn = document.querySelector("button");
 const h2 = document.querySelector("h2")
+const form = document.querySelector("#formulario");
 
 
 
@@ -49,8 +50,15 @@ pid.innerText="";
 // vamos a usar pid para meter la imagen dentro de el. Se pudo haber usado appendChild con el mismo resultado
 pid.appendChild(img);
 
-function btnOnClick(){
+// esta parte es para agregarle el addListener(evento, funcion sin ())
+// en los formularios no se usa el evento click si no submit
+form.addEventListener("submit", sumInputValues);
+// de donde sale el event? este argumento lo pone automaticamente  la funcion addeventlistener en cualquier funcion
+// que se le pase.  Para evitar que se recarge la pagina (pero tambien esto no permitira enviar la informacion del
+// formulario) se usa event.preventDefault();
+function sumInputValues(event){
+    event.preventDefault();
     resultBtn = parseFloat(input1.value) + parseFloat(input2.value);
-    h2.append(resultBtn);
+    h2.innerText = "The result of the addition is: " + resultBtn;
 
 }

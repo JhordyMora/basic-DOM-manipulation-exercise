@@ -12,13 +12,19 @@
     <p>Esto es un párrafo</p>
     <p class="parrafito">Esto es un párrafo en una clase</p>
     <p id="pid">Esto es un párrafo con un ID</p>
-<!-- onchange se activa si se hace un cambio y luego se da un click en otra parte de la pagina. Cuando esto
+
+
+    <form id="formulario">
+        <h3>Este es un formulario</h3>
+        <!-- onchange se activa si se hace un cambio y luego se da un click en otra parte de la pagina. Cuando esto
 pasa. Se llama la funcion que esté ahí. Esta es una manera de agregar eventos, la otra es directamente con JS 
 con el metodo addEventListener -->
-    <input id="calculo" placeholder="Escribe el primer número aquí" onchange="console.log('Se hizo un cambio')"/> 
-    <input id="calculo2" placeholder="Escribe el segundo número aquí"/> 
-    <button id="btnCalcular" onclick="btnOnClick()">Calcular</button>
-    <h2> The result of the addition is: </h2>
+        <input id="calculo" placeholder="Escribe el primer número aquí" onchange="console.log('Se hizo un cambio')"/> 
+        <input id="calculo2" placeholder="Escribe el segundo número aquí"/> 
+      <!--<button id="btnCalcular" onclick="btnOnClick()">Calcular</button>-->
+        <button id="btnCalcular">Calcular</button>
+        <h2>The result of the addition is: </h2>
+    </form>
 
     <script src="./script.js">
 
